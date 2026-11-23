@@ -1,8 +1,7 @@
 # 23 November 2026 — world news in one image
 
-A single 1024×1024 editorial graphic summarising the day's world news. `build_image.py`
-renders it with pure PIL; `main.ts` copies the committed `entry.png` to the output
-directory the grader reads.
+A single 1024×1024 editorial graphic summarising the day's world news. `main.ts` copies
+the committed `entry.png` to the output directory the grader reads.
 
 ## What the image shows
 
@@ -15,11 +14,7 @@ directory the grader reads.
 ## How to run
 
 ```sh
-# 1. Render the image (optional — entry.png is already committed)
 mkdir -p out
-MAKEFUN_OUTPUT_DIR=out python3 build_image.py
-
-# 2. Copy the entry to the grader's output directory
 MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
