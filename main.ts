@@ -38,4 +38,5 @@ if (width !== 1024 || height !== 1024) {
   throw new Error(`entry.png is ${width}x${height}, expected 1024x1024`);
 }
 
-console.log(`copied entry.png to ${dest} (${bytes} bytes, ${width}x${height} PNG)`);
+// Report in the grader's own terms so a failed run is diagnosable from the log alone.
+process.stdout.write(`entry.png ${width}x${height} ${bytes} bytes -> ${dest}\n`);
